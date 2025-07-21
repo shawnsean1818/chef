@@ -19,12 +19,12 @@ else
   gem "chef-bin" # rubocop:disable Bundler/DuplicatedGem
 end
 
-gem "cheffish", ">= 17"
+gem "cheffish", ">= 17.1.7"
 
 group(:omnibus_package) do
   gem "appbundler"
   gem "rb-readline"
-  gem "inspec-core-bin", ">= 5" # need to provide the binaries for inspec
+  gem "inspec-core-bin", ">= 5.22.3" # need to provide the binaries for inspec
   gem "chef-vault"
 end
 
@@ -51,11 +51,11 @@ end
 group(:development, :test) do
   gem "rake"
   gem "rspec"
-  gem "webmock"
+  gem "webmock", ">= 3.19.0"
   gem "fauxhai-ng" # for chef-utils gem
 end
 
-gem "chefstyle"
+gem "chefstyle", ">= 2.2.3"
 # group(:chefstyle) do
 #   # for testing new chefstyle rules
 #   gem "chefstyle", git: "https://github.com/chef/chefstyle.git", branch: "main"
